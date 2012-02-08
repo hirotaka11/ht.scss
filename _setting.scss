@@ -1,0 +1,35 @@
+// # Support
+$support-ie6: false;
+$support-ie7: false;
+$support-ie8: true;
+$support-ie9: true;
+$support-mozilla: true;
+$support-webkit : true; // Chrome, Safari
+$support-opera  : true;
+
+// # Vendor-prefixed CSS Property
+$use-prefix-webkit: true;
+$use-prefix-moz   : true;
+$use-prefix-ms    : true;
+$use-prefix-o     : true;
+
+// # IE
+$use-ie-filter    : false;
+$use-ie-expression: false;
+
+// # Path
+$path-pj : "*****";
+$path-img: "#{$path-pj}/img";
+$path-sprite: "#{$path-img}/sprite.png";
+
+// # DataURI
+$dataURI-btn: "data:image/png;base64,*****";
+
+// # HTML5
+$use-html5: true;
+@if $use-html5 {
+    article,aside,details,figcaption,figure,
+    footer,header,hgroup,menu,nav,section {
+        display: block;
+    }
+}

@@ -1,0 +1,41 @@
+@mixin clearfix {
+	.clearfix {width:100%;}
+	.clearfix:after{
+	    content: ""; 
+	    display: block; 
+	    clear: both;
+	}
+}
+
+@mixin border-radius($property-value, $property-type: shorthand) {
+	// ex. border-radius("5px", "top-left-right")
+	// ex. border-radius("5px 10px 5px 10px")
+    // [NOTE]
+    // Firefox3.6以下のtopleftやbottomrightなどの
+    // 1コーナーのみを指定する記述には対応していません。
+    //
+    $property: border-radius;
+    @if $property-type != shorthand {
+        $property: border-#{$property-type}-radius;
+    }
+    // OUTPUT
+    @if $use-prefix-webkit { -webkit-#{$property}: #{$property-value}; }
+    @if $use-prefix-moz { -moz-#{$property}: #{$property-value}; }
+    #{$property}: #{$property-value};
+}
+
+@mixin grid-unit($span) {
+  float: left;
+  margin-right: $gutter-width;
+  width: ($column-width * $span) + ($gutter-width * ($span - 1));
+}
+
+@mixin inline-block {
+	//inline-block ie6 or ie7 hack
+	display: inline-block;
+	@if $support-ie6 or $support-ie7 {
+		*display: inline;
+		*zoom: 1;
+	}
+}
+
