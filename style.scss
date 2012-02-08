@@ -1,25 +1,21 @@
 @charset "utf-8";
 
-@import "setting"; //設定用
+@import "setting"; //Setting
 @import "mixin"; //Mixin
-
-//Columns
-$column-width: 60px;    // 12 columns = 720px
-$gutter-width: 20px;    // 11 gutters = 220px
+@import "variables"; //Variables
+@import "layout"; //Layout
 
 body {
 	padding: 60px;
 }
 
-.container {
+.container-fluid {
   @include clearfix;
-  @include grid-unit(12);
   float: none;
   margin: 0 auto;
 }
-
-.main-content {
-  @include grid-unit(8);
+#main-content {
+	min-height: 600px;
 }
 
 .sidebar {

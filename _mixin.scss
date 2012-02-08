@@ -11,9 +11,9 @@
 	// ex. border-radius("5px", "top-left-right")
 	// ex. border-radius("5px 10px 5px 10px")
     // [NOTE]
-    // Firefox3.6以下のtopleftやbottomrightなどの
-    // 1コーナーのみを指定する記述には対応していません。
-    //
+    // Firefox3.6 under with "topleft", "bottomright" etc...
+    // not suported
+    
     $property: border-radius;
     @if $property-type != shorthand {
         $property: border-#{$property-type}-radius;
