@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-@import "setting"; //Setting
-@import "mixin"; //Mixin
-@import "variables"; //Variables
-@import "layout"; //Layout
+@import "core"; //read All SCSS
+
+@include reset-style;
 
 body {
 	padding: 60px;
